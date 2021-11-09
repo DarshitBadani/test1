@@ -1,0 +1,7 @@
+onst data = req.body;
+        console.log('google data');
+        console.log(data);
+        let auth_result = await verify(data.id_token);
+        if(auth_result.success){
+            console.log('auth_result',auth_result)
+            const profile = auth_result.data;
